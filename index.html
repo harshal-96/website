@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Machine Learning Project Showcase</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Machine Learning Project Showcase</h1>
+
+        <div class="project-grid">
+            <div class="project">
+                <img src="mini.jpg" alt="Mini Image 1" class="mini-image" onclick="showPreview(this)">
+                <img src="preview1.jpg" alt="Preview Image 1" class="preview-image">
+                <button class="close-btn" onclick="hidePreview(this)">Close Preview</button>
+                <h2>Project Title 1</h2>
+                <p>Description of the project. Include details such as technologies used, methodologies applied, and outcomes achieved.</p>
+                <p><strong>Technologies:</strong> Python, TensorFlow, scikit-learn</p>
+                <p><strong>Outcome:</strong> Improved accuracy by X%, deployed as a web application using Flask.</p>
+                <p><strong>Link:</strong> <a href="project1.html">View Project</a></p>
+            </div>
+
+            <div class="project">
+                <img src="mini.jpg" alt="Mini Image 2" class="mini-image" onclick="showPreview(this)">
+                <img src="preview2.jpg" alt="Preview Image 2" class="preview-image">
+                <button class="close-btn" onclick="hidePreview(this)">Close Preview</button>
+                <h2>Project Title 2</h2>
+                <p>Description of the project. Include details such as technologies used, methodologies applied, and outcomes achieved.</p>
+                <p><strong>Technologies:</strong> Python, PyTorch, AWS Sagemaker</p>
+                <p><strong>Outcome:</strong> Implemented a recommendation system with Y% user engagement increase.</p>
+                <p><strong>Link:</strong> <a href="project2.html">View Project</a></p>
+            </div>
+
+            <div class="project">
+                <img src="mini.jpg" alt="Mini Image 3" class="mini-image" onclick="showPreview(this)">
+                <img src="preview3.jpg" alt="Preview Image 3" class="preview-image">
+                <button class="close-btn" onclick="hidePreview(this)">Close Preview</button>
+                <h2>Project Title 3</h2>
+                <p>Description of the project. Include details such as technologies used, methodologies applied, and outcomes achieved.</p>
+                <p><strong>Technologies:</strong> R, Keras, Google Colab</p>
+                <p><strong>Outcome:</strong> Predictive modeling for financial forecasting, achieving Z% accuracy improvement.</p>
+                <p><strong>Link:</strong> <a href="project3.html">View Project</a></p>
+            </div>
+
+            <div class="project">
+                <img src="mini.jpg" alt="Mini Image 4" class="mini-image" onclick="showPreview(this)">
+                <img src="preview4.jpg" alt="Preview Image 4" class="preview-image">
+                <button class="close-btn" onclick="hidePreview(this)">Close Preview</button>
+                <h2>Project Title 4</h2>
+                <p>Description of the project. Include details such as technologies used, methodologies applied, and outcomes achieved.</p>
+                <p><strong>Technologies:</strong> Java, Spring Boot, MySQL</p>
+                <p><strong>Outcome:</strong> Developed a scalable web application for data visualization.</p>
+                <p><strong>Link:</strong> <a href="project4.html">View Project</a></p>
+            </div>
+
+            <!-- Add more projects as needed -->
+
+        </div>
+    </div>
+
+    <script>
+        function showPreview(element) {
+            const project = element.parentElement;
+            const previewImage = project.querySelector('.preview-image');
+            const closeBtn = project.querySelector('.close-btn');
+            previewImage.style.display = 'block';
+            closeBtn.style.display = 'block';
+            element.style.display = 'none';
+        }
+
+        function hidePreview(element) {
+            const project = element.parentElement;
+            const previewImage = project.querySelector('.preview-image');
+            const miniImage = project.querySelector('.mini-image');
+            previewImage.style.display = 'none';
+            element.style.display = 'none';
+            miniImage.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
