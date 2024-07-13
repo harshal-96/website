@@ -72,7 +72,7 @@ font-family:Calibri (Body);
 }
 
 .project h2 {
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     color: #fff; /* White heading color */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Add subtle shadow to the heading font */
 }
