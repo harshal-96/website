@@ -2,7 +2,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 0.8;
-     background: linear-gradient(to bottom, #1a2b38, #2c3e50); /* Dark blue background */
+    background: linear-gradient(to bottom, #1a2b38, #2c3e50); /* Dark blue background */
     color: #fff; /* White font color */
     margin: 0;
     padding: 0;
@@ -11,11 +11,24 @@ body {
 
 .sidebar {
     width: 255px;
+    margin: 10px auto;
     background: linear-gradient(to bottom, #636161, #262626);
     color: #fff;
-    padding: 20px;
+    padding: 10px;
+    border-radius: 8px;
     height: 100vh; /* Full viewport height */
     overflow-y: auto;
+    position: fixed; /* Make the sidebar fixed */
+    top: 0;
+    left: 0;
+}
+
+.profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center align the profile photo */
+    text-align: left; /* Left-align the profile info text */
+    margin-bottom: 30px; /* Increased margin bottom to add distance between sections */
 }
 
 .profile-photo {
@@ -23,28 +36,50 @@ body {
     height: 190px;
     border-radius: 20%;
     margin-bottom: 20px;
-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    align-self: center; /* Center the profile photo within the profile-info */
+}
+
+.profile-info h2 {
+    align-self: flex-start; /* Left-align the name within the profile-info */
+    margin-bottom: 10px; /* Add margin to create space below the name */
+}
+
+.profile-info p {
+    align-self: flex-start; /* Left-align the location within the profile-info */
+    margin: 0; /* Reset margins to avoid extra spacing */
 }
 
 .contact-info {
-    margin-bottom: 30px;
-box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    text-align: left; /* Left-align the contact info text */
+    margin-top: 20px;    
+    margin-bottom: 50px;
+}
+
+.contact-info a {
+    color: #007bff; /* Blue link color */
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
 }
 
 .container {
     max-width: 1200px; /* Adjust as needed */
     margin: 10px auto;
     padding: 25px;
-   background: linear-gradient(to bottom, #2d4258, #30465c); /* Grey container background */
+    background: linear-gradient(to bottom, #223e54,#1D557C); /* Grey container background */
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     border-radius: 8px;
     flex: 1; /* Take remaining space */
+    margin-left: 285px; /* Add margin to the left to accommodate the sidebar */
 }
 
 h1 {
     font-size: 2em;
     text-align: center;
-font-family:Calibri (Body);
+    font-family: Calibri (Body);
     margin-top: -15px; /* Adjust this value to push the heading up */
     margin-bottom: 15px;
     color: #fff; /* White font color */
@@ -63,12 +98,13 @@ font-family:Calibri (Body);
     background: linear-gradient(to bottom, #225178,#112f47); /* Dark blue project background */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for box-shadow */
     overflow: hidden;
 }
 
 .project:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a more pronounced shadow on hover */
 }
 
 .project h2 {
@@ -104,11 +140,12 @@ font-family:Calibri (Body);
     cursor: pointer;
     border: 1px solid #fff;
     border-radius: 4px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for box-shadow */
 }
 
 .mini-image:hover {
     transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glowing shadow effect */
 }
 
 .preview-image {
