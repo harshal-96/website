@@ -12,7 +12,7 @@ body {
 .sidebar {
     width: 255px;
     margin: 10px auto;
-    background: linear-gradient(to bottom, #636161, #262626);
+    background: linear-gradient(to bottom, #2e2e2e, #4d4c4c);
     color: #fff;
     padding: 10px;
     border-radius: 8px;
@@ -69,7 +69,7 @@ body {
     max-width: 1200px; /* Adjust as needed */
     margin: 10px auto;
     padding: 25px;
-    background: linear-gradient(to bottom, #223e54,#1D557C); /* Grey container background */
+    background: linear-gradient(to bottom,#1a3245,#2e4e69); /* Grey container background */
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
     border-radius: 8px;
     flex: 1; /* Take remaining space */
@@ -95,7 +95,7 @@ h1 {
 .project {
     position: relative; /* Position for the mini image */
     padding: 20px;
-    background: linear-gradient(to bottom, #225178,#112f47); /* Dark blue project background */
+    background: linear-gradient(to bottom, #245075,#15354f); /* Dark blue project background */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
     border-radius: 8px;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Added transition for box-shadow */
